@@ -8,8 +8,8 @@ public class Doctor extends User {
     private String specialization;
     private List<Pair<LocalDateTime,LocalDateTime>> availability;
 
-    Doctor(String name, String specialization, String contactNo){
-        super(name,contactNo);
+    public Doctor(String name, String specialization, String contactNo, String password) {
+        super(name,contactNo,password);
         this.specialization=specialization;
     }
 

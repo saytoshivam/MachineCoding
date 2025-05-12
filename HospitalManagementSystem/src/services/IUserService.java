@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface IUserService {
     List<Appointment> getAppointmentList(int id);
+    Boolean Login(int id, String password);
 }

@@ -3,6 +3,7 @@ package repositories;
 import entities.Doctor;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class DoctorRepo {
     private HashMap<Integer, Doctor> doctorHashMap = new HashMap<>();
@@ -19,5 +20,11 @@ public class DoctorRepo {
     public int addDoctor(Doctor p){
         doctorHashMap.put(p.getId(),p);
         return p.getId();
+    }
+    public Doctor getDoctorById(int id){
+        return doctorHashMap.get(id);
+    }
+    public List<Doctor> getDoctorsByFirstFreeTime(){
+        return null;
     }
 }

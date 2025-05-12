@@ -22,5 +22,7 @@ public class PatientRepo {
         return p.getId();
     }
 
-
+    public Patient getPatientById(int id){
+        return patientHashMap.get(id);
+    }
 }

@@ -18,4 +18,17 @@ public class DoctorService implements IDoctorService {
     public List<Appointment> getAppointmentList(int id) {
         return AppointmentRepo.getInstance().getAppointmentById(id,true);
     }
+
+    @Override
+    public Boolean Login(int id, String password) {
+        Doctor d = DoctorRepo.getInstance().getDoctorById(id);
+        if(d.getPassword()==password)
+            return true;
+        
+        return false;
+    }
+
+    public List<Doctor> getAllDoctorsByFirstFreeTime() {
+        return DoctorRepo.getInstance().getDoctorsByFirstFreeTime();
+    }
 }

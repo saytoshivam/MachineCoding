@@ -5,11 +5,16 @@ public class User {
     private final int id;
     private String name;
     private String contactNo;
+    private String password;
 
-    User(String name, String contactNo){
+    User(String name, String contactNo, String password) {
         this.id = getNextId();
         this.name = name;
         this.contactNo = contactNo;
+        this.password = password;
+    }
+    public String getPassword() {
+        return password;
     }
 
     private int getNextId(){

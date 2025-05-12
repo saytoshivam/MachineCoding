@@ -64,4 +64,13 @@ public class PatientService implements IPatientService, IAppointmentService {
     public int cancelAppointment(int appointmentId) {
         return AppointmentRepo.getInstance().deleteAppointment(appointmentId);
     }
+
+    @Override
+    public Boolean Login(int id, String password) {
+        Patient p = PatientRepo.getInstance().getPatientById(id);
+        if(p.getPassword()==password)
+            return true;
+
+        return false;
+    }
 }
